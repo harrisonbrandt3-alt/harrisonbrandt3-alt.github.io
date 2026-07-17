@@ -128,32 +128,36 @@ hr {
     font-size: 1.1rem;
 }
 
-/* About Section Flex Layout */
+/* Integrated About Section Layout */
 .about-wrapper {
     display: flex;
-    align-items: center;
-    gap: 50px;
+    align-items: stretch; /* Forces text and image box to be equal height */
+    gap: 40px;
     flex-wrap: wrap;
 }
 
 .about-image {
     flex: 1;
-    min-width: 280px;
-    max-width: 380px;
-    margin: 0 auto;
+    min-width: 300px;
+    max-width: 340px;
+    display: flex;
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-    border: 4px solid white;
+    height: 100%;
+    object-fit: cover; /* Crops cleanly to match the height of your text */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    border: 1px solid #e2e8f0;
 }
 
 .about-text {
     flex: 2;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns text centered with your picture */
 }
 
 .about-text p {
@@ -162,7 +166,7 @@ hr {
     text-align: left;
 }
 
-/* Updated Projects Grid and Cards */
+/* Strict Sizing Grid for Project Cards */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -172,48 +176,53 @@ hr {
 .project-card {
     background: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
+/* Force all card images to be identical bounding boxes without warping */
 .project-card-image {
     width: 100%;
-    height: 220px;
+    height: 200px; /* Constrains vertical height strictly */
     overflow: hidden;
+    background: #e2e8f0; 
 }
 
 .project-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Centers and cleanly clips image aspect ratios automatically */
     transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-card-image img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .project-card-content {
-    padding: 25px;
+    padding: 24px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card h3 {
     margin-bottom: 5px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .project-card .meta {
     color: var(--primary);
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* Skills section styling */
+/* Skills Section */
 .skills-wrapper {
     display: flex;
     justify-content: space-around;
@@ -265,11 +274,14 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Mobile adjustments */
+/* Responsive Overrides */
 @media (max-width: 768px) {
     .about-wrapper {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+    .about-image {
+        max-width: 100%;
     }
     .about-text p {
         text-align: center;
