@@ -48,10 +48,10 @@ header .container {
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: -0.5px;
-    background: linear-gradient(to right, #ffffff, var(--primary));
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff, var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -308,6 +308,31 @@ hr {
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+/* Contact Section Styling */
+.contact-card {
+    background: var(--card-bg);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.contact-disclaimer {
+    font-size: 0.9rem !important;
+    color: var(--text-muted) !important;
+    margin-bottom: 0 !important;
+    font-style: italic;
 }
 
 /* Footer styling */
