@@ -1,5 +1,5 @@
 :root {
-    --bg-bone: #f7f5f0;          /* Authentic Silian Rail bone off-white */
+    --bg-bone: #f7f5f0;          /* Bone off-white */
     --card-bg: #ffffff;          /* Crisp card surface */
     --text-primary: #1a1a1a;     /* Dark charcoal engraved ink */
     --text-muted: #555555;       /* Muted detail text */
@@ -110,12 +110,16 @@ body {
 .card-bottom-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    font-size: 0.95rem;
+    align-items: center; /* CHANGED from flex-end to center */
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding-top: 20px;
     border-top: 1px solid rgba(224, 220, 211, 0.6);
+}
+
+.card-location {
+    text-align: left;
 }
 
 .card-internship {
