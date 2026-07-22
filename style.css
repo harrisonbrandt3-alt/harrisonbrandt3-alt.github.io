@@ -110,7 +110,7 @@ body {
 .card-bottom-row {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* CHANGED from flex-end to center */
+    align-items: center; /* Keeps left, middle, and right blocks vertically centered relative to each other */
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -118,18 +118,26 @@ body {
     border-top: 1px solid rgba(224, 220, 211, 0.6);
 }
 
-.card-location {
-    text-align: left;
-}
-
+.card-location,
 .card-internship {
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.card-location { 
+    text-align: left; 
+}
+
+.card-internship { 
+    text-align: center; 
+}
+
 .card-nav-links {
+    display: flex;
     text-align: right;
+    gap: 8px;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .card-nav-links a {
