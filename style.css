@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    font-family: 'Copperplate Gothic Bold', 'Copperplate Gothic Light', 'Copperplate', 'Cinzel', serif;
     background-color: var(--bg-bone);
     color: var(--text-primary);
     line-height: 1.5;
@@ -32,19 +32,19 @@ body {
 .business-card {
     background: var(--card-bg);
     width: 100%;
-    max-width: 720px;
+    max-width: 900px; /* INCREASED from 720px */
     border: 1px solid var(--border-light);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
-    padding: 25px;
+    padding: 35px;    /* INCREASED from 25px */
 }
 
 .card-border-inner {
     border: 1px solid rgba(140, 115, 85, 0.3);
-    padding: 40px 35px;
+    padding: 55px 45px; /* INCREASED from 40px 35px */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 380px;
+    min-height: 480px;  /* INCREASED from 380px */
 }
 
 /* Top Row Layout */
@@ -111,7 +111,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding-top: 20px;
